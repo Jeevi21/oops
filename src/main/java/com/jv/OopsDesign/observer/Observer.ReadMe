@@ -1,0 +1,32 @@
+Idea is to implement a watcher(File watcher)
+	where we have a linux based file system(folders , files) that support following activities
+	 1. mkdir - creating folder 
+	 2. vi    - creating file
+	 3. rm    - creating file or folder.
+	Watchers are allowed to subscribe to any node. 
+	If there are any changes made to he node or its descendents... notify all the watchers..
+	
+------
+  SO here.. Every node is a subject... and it can maintain a list of watchers. 
+  And tree must provide a method which will let watchers to register themselves to the nodes.
+  Every time for addition or removal of file or folder, absolute path is given.
+  
+  By default I create a root "/" directory. - All my folders,files are created under root.
+  
+  For simplicity assume the last value is the path has to be created and it does not end with / 
+  	/opt/deploy/ - Invalid path
+  
+  If directory does not exists throw error.
+  
+  Examples :
+    mkdir /opt/deploy  - creates only deploy folder. if opt folder doesn't exists.... exception is thrown. 
+    
+    
+    
+    
+	
+	
+	
+	
+
+	
